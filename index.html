@@ -4,30 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>God Digital Marketing - India's Leading Digital Growth Strategy Agency</title>
-    <meta name="description" content="Transform your business with God Digital Marketing's comprehensive digital marketing services across 500+ Indian cities. Expert SEO, PPC, social media marketing delivering guaranteed ROI growth.">
+    <meta name="description" content="Transform your business with God Digital Marketing's comprehensive digital marketing services across 500+ Indian cities.">
     
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: Arial, sans-serif; 
+            background: #000; 
+            color: #fff; 
+            line-height: 1.6; 
+            overflow-x: hidden; 
         }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         
-        body {
-            font-family: 'Arial', sans-serif;
-            background: #000;
-            color: #fff;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -51,29 +40,12 @@
             animation: float 6s ease-in-out infinite;
         }
         
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: 40%;
-            right: 10%;
-            width: 400px;
-            height: 400px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 50%;
-            filter: blur(120px);
-            animation: float 8s ease-in-out infinite reverse;
-        }
-        
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-20px); }
         }
         
-        .hero-content {
-            text-align: center;
-            z-index: 10;
-            position: relative;
-        }
+        .hero-content { text-align: center; z-index: 10; position: relative; }
         
         .hero h1 {
             font-size: clamp(3rem, 8vw, 6rem);
@@ -83,12 +55,6 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: shimmer 3s ease-in-out infinite;
-        }
-        
-        @keyframes shimmer {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
         }
         
         .hero h2 {
@@ -97,10 +63,7 @@
             color: #ccc;
         }
         
-        .hero h2 span {
-            color: #fff;
-            font-weight: bold;
-        }
+        .hero h2 span { color: #fff; font-weight: bold; }
         
         .hero p {
             font-size: clamp(1rem, 2vw, 1.25rem);
@@ -110,11 +73,8 @@
             line-height: 1.8;
         }
         
-        .hero p strong {
-            color: #fff;
-        }
+        .hero p strong { color: #fff; }
         
-        /* CTA Buttons */
         .cta-buttons {
             display: flex;
             gap: 2rem;
@@ -160,7 +120,6 @@
             transform: translateY(-3px);
         }
         
-        /* Stats Grid */
         .stats {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -196,7 +155,6 @@
             font-size: 0.9rem;
         }
         
-        /* Services Section */
         .services {
             padding: 5rem 0;
             background: linear-gradient(180deg, #1a1a1a 0%, #000 100%);
@@ -237,35 +195,17 @@
             border-color: rgba(255, 255, 255, 0.2);
         }
         
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
+        .service-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .service-card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: #fff; }
+        .service-card p { color: #ccc; margin-bottom: 1.5rem; line-height: 1.6; }
         
-        .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #fff;
-        }
-        
-        .service-card p {
-            color: #ccc;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-        
-        .service-features {
-            list-style: none;
-            margin-bottom: 1.5rem;
-        }
-        
+        .service-features { list-style: none; margin-bottom: 1.5rem; }
         .service-features li {
             color: #ccc;
             margin-bottom: 0.5rem;
             padding-left: 1.5rem;
             position: relative;
         }
-        
         .service-features li::before {
             content: '✓';
             position: absolute;
@@ -274,7 +214,6 @@
             font-weight: bold;
         }
         
-        /* Footer */
         .footer {
             background: #000;
             border-top: 1px solid #333;
@@ -282,48 +221,19 @@
             text-align: center;
         }
         
-        .footer h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: #fff;
-        }
+        .footer h3 { font-size: 1.5rem; margin-bottom: 0.5rem; color: #fff; }
+        .footer p { color: #666; margin-bottom: 1rem; }
+        .footer-tagline { color: #999; font-size: 0.9rem; }
         
-        .footer p {
-            color: #666;
-            margin-bottom: 1rem;
-        }
-        
-        .footer-tagline {
-            color: #999;
-            font-size: 0.9rem;
-        }
-        
-        /* Responsive */
         @media (max-width: 768px) {
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .btn {
-                width: 100%;
-                max-width: 300px;
-                justify-content: center;
-            }
-            
-            .stats {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1rem;
-            }
-            
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
+            .cta-buttons { flex-direction: column; align-items: center; }
+            .btn { width: 100%; max-width: 300px; justify-content: center; }
+            .stats { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+            .services-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
@@ -332,12 +242,8 @@
                 <p><strong>Divine Digital Solutions for Godly Growth</strong> - Transforming businesses across 500+ Indian cities with comprehensive digital marketing services, AI-powered automation, and data-driven strategies that deliver guaranteed ROI growth.</p>
                 
                 <div class="cta-buttons">
-                    <a href="#contact" class="btn btn-primary">
-                        🚀 Start Your Digital Transformation
-                    </a>
-                    <a href="#portfolio" class="btn btn-secondary">
-                        ▶️ Watch Success Stories
-                    </a>
+                    <a href="#contact" class="btn btn-primary">🚀 Start Your Digital Transformation</a>
+                    <a href="#portfolio" class="btn btn-secondary">▶️ Watch Success Stories</a>
                 </div>
                 
                 <div class="stats">
@@ -362,7 +268,6 @@
         </div>
     </section>
 
-    <!-- Services Section -->
     <section class="services">
         <div class="container">
             <h2>Why Choose India's Most Trusted Internet Marketing Services Provider</h2>
@@ -420,7 +325,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <h3>God Digital Marketing</h3>
