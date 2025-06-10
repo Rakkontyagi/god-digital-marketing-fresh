@@ -1,24 +1,336 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>God Digital Marketing | Best Digital Marketing Agency in India | Expert Services Across All States</title>
-    <!-- Force deployment v4 -->
-    <meta name="description" content="God Digital Marketing - India's leading digital marketing agency providing SEO, PPC, social media, lead generation, AI automation services across all Indian states and cities. Boost ROI, productivity and automate your business growth." />
-    <meta name="keywords" content="God Digital Marketing, digital marketing agency india, digital marketing expert, lead generation services, AI automation, business automation, ROI optimization, productivity enhancement, digital marketing services all india" />
-    <meta name="author" content="God Digital Marketing" />
-    <meta property="og:title" content="God Digital Marketing | Revolutionary Digital Marketing Solutions Across India" />
-    <meta property="og:description" content="Transform your business with God Digital Marketing's comprehensive services: SEO, PPC, lead generation, AI automation, and business growth solutions across all Indian states." />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="God Digital Marketing | Best Digital Marketing Agency in India" />
-    <meta name="twitter:description" content="Revolutionary digital marketing solutions, lead generation, AI automation, and business growth services across all Indian states and cities." />
-    <link rel="canonical" href="https://goddigitalmarketing.com" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>God Digital Marketing - India's Leading Digital Growth Strategy Agency</title>
+    <meta name="description" content="Transform your business with God Digital Marketing's comprehensive digital marketing services across 500+ Indian cities. Expert SEO, PPC, social media marketing delivering guaranteed ROI growth.">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: Arial, sans-serif; 
+            background: #000; 
+            color: #fff; 
+            line-height: 1.6; 
+            overflow-x: hidden; 
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #000 0%, #1a1a1a 50%, #000 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            filter: blur(100px);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .hero-content { text-align: center; z-index: 10; position: relative; }
+        
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #fff 0%, #ccc 50%, #fff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero h2 {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            margin-bottom: 1rem;
+            color: #ccc;
+        }
+        
+        .hero h2 span { color: #fff; font-weight: bold; }
+        
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: #999;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+        }
+        
+        .hero p strong { color: #fff; }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 4rem;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-primary {
+            background: #fff;
+            color: #000;
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+        
+        .btn-secondary:hover {
+            background: #fff;
+            color: #000;
+            transform: translateY(-3px);
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+        
+        .services {
+            padding: 5rem 0;
+            background: linear-gradient(180deg, #1a1a1a 0%, #000 100%);
+        }
+        
+        .services h2 {
+            text-align: center;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+        
+        .services-subtitle {
+            text-align: center;
+            color: #ccc;
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .service-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .service-card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: #fff; }
+        .service-card p { color: #ccc; margin-bottom: 1.5rem; line-height: 1.6; }
+        
+        .service-features { list-style: none; margin-bottom: 1.5rem; }
+        .service-features li {
+            color: #ccc;
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .service-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4ade80;
+            font-weight: bold;
+        }
+        
+        .footer {
+            background: #000;
+            border-top: 1px solid #333;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .footer h3 { font-size: 1.5rem; margin-bottom: 0.5rem; color: #fff; }
+        .footer p { color: #666; margin-bottom: 1rem; }
+        .footer-tagline { color: #999; font-size: 0.9rem; }
+        
+        @media (max-width: 768px) {
+            .cta-buttons { flex-direction: column; align-items: center; }
+            .btn { width: 100%; max-width: 300px; justify-content: center; }
+            .stats { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+            .services-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>God Digital Marketing</h1>
+                <h2>India's Leading <span>Digital Growth Strategy Agency</span></h2>
+                <p><strong>Divine Digital Solutions for Godly Growth</strong> - Transforming businesses across 500+ Indian cities with comprehensive digital marketing services, AI-powered automation, and data-driven strategies that deliver guaranteed ROI growth.</p>
+                
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">🚀 Start Your Digital Transformation</a>
+                    <a href="#portfolio" class="btn btn-secondary">▶️ Watch Success Stories</a>
+                </div>
+                
+                <div class="stats">
+                    <div class="stat-card">
+                        <div class="stat-number">2000+</div>
+                        <div class="stat-label">Clients Transformed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Cities Covered</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">350%</div>
+                        <div class="stat-label">Average ROI Growth</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">99.8%</div>
+                        <div class="stat-label">Success Rate</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2>Why Choose India's Most Trusted Internet Marketing Services Provider</h2>
+            <p class="services-subtitle">Our comprehensive digital marketing solutions combine cutting-edge technology with proven strategies to deliver exceptional results across all digital channels.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🎯</div>
+                    <h3>Strategic Digital Marketing Excellence</h3>
+                    <p>Comprehensive digital marketing solutions combining advanced SEO mastery, performance PPC optimization, and social media dominance.</p>
+                    <ul class="service-features">
+                        <li>Advanced SEO Strategies</li>
+                        <li>Performance PPC Campaigns</li>
+                        <li>Social Media Mastery</li>
+                        <li>Content Marketing Excellence</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🤖</div>
+                    <h3>AI-Powered Marketing Automation</h3>
+                    <p>Revolutionary marketing automation solutions leveraging artificial intelligence and machine learning to streamline customer journeys.</p>
+                    <ul class="service-features">
+                        <li>AI-Driven Automation</li>
+                        <li>Smart Lead Nurturing</li>
+                        <li>Behavioral Targeting</li>
+                        <li>Predictive Analytics</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>Data-Driven Business Growth</h3>
+                    <p>Transform raw data into actionable insights with our advanced analytics platform, driving strategic decisions.</p>
+                    <ul class="service-features">
+                        <li>Advanced Analytics</li>
+                        <li>Performance Tracking</li>
+                        <li>ROI Optimization</li>
+                        <li>Growth Strategies</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Enterprise Web Development</h3>
+                    <p>Cutting-edge web development solutions featuring responsive design, e-commerce integration, and mobile-first architecture.</p>
+                    <ul class="service-features">
+                        <li>Responsive Design</li>
+                        <li>E-commerce Solutions</li>
+                        <li>Mobile Optimization</li>
+                        <li>Performance Focus</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <h3>God Digital Marketing</h3>
+            <p>Divine Digital Solutions for Godly Growth</p>
+            <p class="footer-tagline">© 2025 God Digital Marketing. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
 </html>
