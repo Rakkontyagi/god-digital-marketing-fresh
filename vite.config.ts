@@ -65,7 +65,7 @@ export default defineConfig({
     include: ['framer-motion', 'three', '@react-three/fiber', '@react-three/drei']
   },
   build: {
-    // Ultra-optimized build configuration
+    // Ultra-optimized build configuration for Netlify
     minify: 'terser',
     terserOptions: {
       compress: {
@@ -80,6 +80,9 @@ export default defineConfig({
         safari10: true
       }
     },
+    // Netlify-specific optimizations
+    outDir: 'dist',
+    emptyOutDir: true,
     rollupOptions: {
       output: {
         manualChunks: {
@@ -92,10 +95,12 @@ export default defineConfig({
           // Icons
           'icon-vendor': ['lucide-react']
         },
-        // Optimize chunk names
+        // Optimize chunk names for Netlify
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash].[ext]'
+        assetFileNames: 'assets/[name]-[hash].[ext]',
+        // Ensure proper module format
+        format: 'es'
       }
     },
     // Enable all optimizations

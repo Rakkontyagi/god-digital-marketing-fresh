@@ -1,0 +1,27 @@
+# Netlify redirects for SPA with client-side routing
+# HIGH PRIORITY: Force specific city-service routes to React app (must be first!)
+/mumbai/digital-marketing/    /index.html   200!
+/bangalore/digital-marketing/ /index.html   200!
+/chennai/digital-marketing/   /index.html   200!
+/delhi/digital-marketing/     /index.html   200!
+/pune/digital-marketing/      /index.html   200!
+/hyderabad/digital-marketing/ /index.html   200!
+
+# FORCE all city-service routes to use client-side routing (! flag forces redirect even if static file exists)
+/*/digital-marketing/    /index.html   200!
+/*/seo-services/         /index.html   200!
+/*/ppc-advertising/      /index.html   200!
+/*/social-media-marketing/ /index.html   200!
+/*/ai-automation/        /index.html   200!
+/*/business-automation/  /index.html   200!
+
+# Specific redirects for better SEO (without trailing slash)
+/mumbai/digital-marketing    /mumbai/digital-marketing/    301
+/bangalore/seo-services      /bangalore/seo-services/      301
+/chennai/ppc-advertising     /chennai/ppc-advertising/     301
+/delhi/social-media-marketing /delhi/social-media-marketing/ 301
+/pune/ai-automation          /pune/ai-automation/          301
+/hyderabad/business-automation /hyderabad/business-automation/ 301
+
+# Fallback for all other routes
+/*    /index.html   200
