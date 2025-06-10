@@ -680,10 +680,152 @@ function AppContent() {
     );
   }
 
-  // Default homepage - Use 2025 Design
+  // Default homepage - Simple 2025 Design Test
   return (
     <div className="min-h-screen bg-black text-white">
-      <GodDigitalMarketing2025 />
+      {/* Simple Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black">
+        {/* Animated Background */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-20 left-20 w-72 h-72 bg-white rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse"></div>
+          <div className="absolute top-40 right-20 w-96 h-96 bg-gray-300 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse"></div>
+        </div>
+
+        <div className="container relative z-10 max-w-6xl mx-auto px-6">
+          <div className="text-center">
+            {/* Main Headline */}
+            <h1 className="text-6xl md:text-8xl font-black mb-6 bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">
+              God Digital Marketing
+            </h1>
+
+            <div className="text-2xl md:text-4xl text-gray-300 mb-4">
+              India's Leading <span className="text-white font-bold">Digital Growth Strategy Agency</span>
+            </div>
+
+            <div className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed mb-12">
+              <strong className="text-white">Divine Digital Solutions for Godly Growth</strong> - Transforming businesses across 500+ Indian cities with
+              comprehensive digital marketing services, AI-powered automation, and data-driven strategies that deliver guaranteed ROI growth.
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+              <button className="bg-white text-black px-10 py-5 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105">
+                🚀 Start Your Digital Transformation
+              </button>
+
+              <button className="border-2 border-white text-white px-10 py-5 rounded-lg text-lg font-semibold hover:bg-white hover:text-black transition-all transform hover:scale-105">
+                ▶️ Watch Success Stories
+              </button>
+            </div>
+
+            {/* Hero Statistics */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="bg-white/10 backdrop-blur-lg p-6 rounded-xl text-center border border-white/20 hover:scale-105 transition-all">
+                <div className="text-3xl font-bold text-white mb-2">2000+</div>
+                <div className="text-gray-300 text-sm">Clients Transformed</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-lg p-6 rounded-xl text-center border border-white/20 hover:scale-105 transition-all">
+                <div className="text-3xl font-bold text-white mb-2">500+</div>
+                <div className="text-gray-300 text-sm">Cities Covered</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-lg p-6 rounded-xl text-center border border-white/20 hover:scale-105 transition-all">
+                <div className="text-3xl font-bold text-white mb-2">350%</div>
+                <div className="text-gray-300 text-sm">Average ROI Growth</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-lg p-6 rounded-xl text-center border border-white/20 hover:scale-105 transition-all">
+                <div className="text-3xl font-bold text-white mb-2">99.8%</div>
+                <div className="text-gray-300 text-sm">Success Rate</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div className="container max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Why Choose India's Most Trusted Internet Marketing Services Provider
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+              Our comprehensive digital marketing solutions combine cutting-edge technology with proven strategies
+              to deliver exceptional results across all digital channels.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              {
+                title: "Strategic Digital Marketing Excellence",
+                description: "Comprehensive digital marketing solutions combining advanced SEO mastery, performance PPC optimization, and social media dominance.",
+                features: ["Advanced SEO Strategies", "Performance PPC Campaigns", "Social Media Mastery", "Content Marketing Excellence"],
+                stats: { clients: "800+", growth: "285%" }
+              },
+              {
+                title: "AI-Powered Marketing Automation",
+                description: "Revolutionary marketing automation solutions leveraging artificial intelligence and machine learning to streamline customer journeys.",
+                features: ["AI-Driven Automation", "Smart Lead Nurturing", "Behavioral Targeting", "Predictive Analytics"],
+                stats: { clients: "600+", growth: "420%" }
+              },
+              {
+                title: "Data-Driven Business Growth",
+                description: "Transform raw data into actionable insights with our advanced analytics platform, driving strategic decisions.",
+                features: ["Advanced Analytics", "Performance Tracking", "ROI Optimization", "Growth Strategies"],
+                stats: { clients: "700+", growth: "365%" }
+              },
+              {
+                title: "Enterprise Web Development",
+                description: "Cutting-edge web development solutions featuring responsive design, e-commerce integration, and mobile-first architecture.",
+                features: ["Responsive Design", "E-commerce Solutions", "Mobile Optimization", "Performance Focus"],
+                stats: { clients: "500+", growth: "310%" }
+              }
+            ].map((service, index) => (
+              <div key={index} className="bg-gray-800/50 backdrop-blur-lg p-8 rounded-2xl border border-gray-700 hover:scale-105 transition-all duration-500">
+                <div className="flex justify-between items-start mb-6">
+                  <div className="text-4xl">🎯</div>
+                  <div className="text-right">
+                    <div className="text-2xl font-bold text-white">{service.stats.clients}</div>
+                    <div className="text-xs text-gray-400">Happy Clients</div>
+                  </div>
+                </div>
+
+                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+                <p className="text-gray-300 mb-6">{service.description}</p>
+
+                <ul className="space-y-3 mb-6">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center gap-3 text-gray-300">
+                      <span className="text-green-400">✓</span>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="text-center p-3 bg-white/5 rounded-lg">
+                    <div className="text-lg font-bold text-white">{service.stats.growth}</div>
+                    <div className="text-xs text-gray-400">Avg Growth</div>
+                  </div>
+                  <div className="text-center p-3 bg-white/5 rounded-lg">
+                    <div className="text-lg font-bold text-white">99.8%</div>
+                    <div className="text-xs text-gray-400">Satisfaction</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-black border-t border-gray-800 py-16">
+        <div className="container max-w-6xl mx-auto px-6 text-center">
+          <div className="text-white font-bold text-2xl mb-4">God Digital Marketing</div>
+          <div className="text-gray-400 mb-8">Divine Digital Solutions for Godly Growth</div>
+          <div className="text-gray-500">© 2025 God Digital Marketing. All rights reserved.</div>
+        </div>
+      </footer>
     </div>
   );
 }
