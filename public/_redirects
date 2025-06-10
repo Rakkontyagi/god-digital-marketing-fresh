@@ -1,4 +1,15 @@
-/*    /index.html   200
+# Asset files should be served directly (not redirected to index.html)
+/assets/*    /assets/:splat   200
+/favicon.ico    /favicon.ico   200
+/manifest.json    /manifest.json   200
+/manifest.webmanifest    /manifest.webmanifest   200
+/robots.txt    /robots.txt   200
+/sitemap.xml    /sitemap.xml   200
+/sw.js    /sw.js   200
+/workbox-*.js    /workbox-:splat.js   200
+
+# City-Service combinations use React routing (force override static files)
+/:city/:service/    /index.html   200!
 
 # Service + Location Pages (Dynamic routing for 3000+ pages)
 /digital-marketing/:state/:city    /index.html   200
@@ -79,3 +90,6 @@
 /healthcare-digital-marketing    /index.html   200
 /ecommerce-digital-marketing    /index.html   200
 /real-estate-digital-marketing    /index.html   200
+
+# Catch-all redirect for SPA routing (MUST be last)
+/*    /index.html   200
