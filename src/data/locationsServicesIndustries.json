@@ -1,0 +1,51 @@
+{
+  "states": [
+    {
+      "name": "Andhra Pradesh",
+      "slug": "andhra-pradesh",
+      "cities": [
+        { "name": "Visakhapatnam", "slug": "visakhapatnam" },
+        { "name": "Vijayawada", "slug": "vijayawada" },
+        { "name": "Guntur", "slug": "guntur" },
+        { "name": "Nellore", "slug": "nellore" },
+        { "name": "Kurnool", "slug": "kurnool" },
+        { "name": "Kakinada", "slug": "kakinada" },
+        { "name": "Rajahmundry", "slug": "rajahmundry" },
+        { "name": "Tirupati", "slug": "tirupati" },
+        { "name": "Kadapa", "slug": "kadapa" },
+        { "name": "Anantapur", "slug": "anantapur" },
+        { "name": "Eluru", "slug": "eluru" },
+        { "name": "Chittoor", "slug": "chittoor" },
+        { "name": "Machilipatnam", "slug": "machilipatnam" },
+        { "name": "Adoni", "slug": "adoni" },
+        { "name": "Srikakulam", "slug": "srikakulam" },
+        { "name": "Vizianagaram", "slug": "vizianagaram" }
+      ]
+    }
+  ],
+  "services": [
+    { "name": "SEO Services", "slug": "seo-services" },
+    { "name": "PPC Advertising", "slug": "ppc-advertising" },
+    { "name": "Social Media Marketing", "slug": "social-media-marketing" },
+    { "name": "Content Marketing", "slug": "content-marketing" },
+    { "name": "Email Marketing", "slug": "email-marketing" },
+    { "name": "Digital Marketing", "slug": "digital-marketing" },
+    { "name": "Lead Generation", "slug": "lead-generation" }
+  ],
+  "automationServices": [
+    { "name": "AI Automation", "slug": "ai-automation" },
+    { "name": "Business Automation", "slug": "business-automation" },
+    { "name": "Marketing Automation", "slug": "marketing-automation" }
+  ],
+  "industries": [
+    { "name": "Healthcare", "slug": "healthcare" },
+    { "name": "Real Estate", "slug": "real-estate" },
+    { "name": "Education", "slug": "education" },
+    { "name": "Finance & Banking", "slug": "finance" },
+    { "name": "E-commerce", "slug": "ecommerce" },
+    { "name": "Manufacturing", "slug": "manufacturing" },
+    { "name": "Travel & Hospitality", "slug": "travel-hospitality" },
+    { "name": "Legal", "slug": "legal" },
+    { "name": "Automotive", "slug": "automotive" }
+  ]
+} 

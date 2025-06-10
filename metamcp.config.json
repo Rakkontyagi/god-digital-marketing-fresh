@@ -1,0 +1,96 @@
+{
+  "mcpServers": {
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ]
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ]
+    },
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ]
+    },
+    "browsermcp": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@browsermcp/mcp@latest"
+      ]
+    },
+    "puppeteer": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-puppeteer"
+      ]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest"
+      ]
+    },
+    "figma": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@figma/mcp-server"
+      ]
+    },
+    "MetaMCP": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@metamcp/mcp-server-metamcp@latest"
+      ],
+      "env": {
+        "METAMCP_API_KEY": "sk_mt_bJsy2v3gzD4FLFs0Xh5dNhvrUqKGwYkwZz4BQKfnbU9jsNsIkrYBKxUXJirwydhB"
+      }
+    },
+    "supabase": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@supabase/mcp-server-supabase@latest",
+        "--access-token",
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhwY2J5emNhaWRmdWtkZHFuaW55Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDY3OTA1MzYsImV4cCI6MjA2MjM2NjUzNn0.k6gsHXOoRFTc-lYTn3gvH-pB71tXwTVzQF5OFu5mV1A"
+      ]
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "C:\\Users\\dell\\Desktop",
+        "C:\\Users\\dell\\Documents",
+        "C:\\Users\\dell\\Downloads"
+      ]
+    },
+    "memory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ]
+    },
+    "fetch": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-fetch"
+      ]
+    }
+  }
+} 

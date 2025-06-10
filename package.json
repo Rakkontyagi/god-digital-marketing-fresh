@@ -1,0 +1,62 @@
+{
+  "name": "god-digital-marketing-agency",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build && node scripts/generateStaticSite.cjs && node scripts/generate-sitemap.cjs",
+    "build:analyze": "vite build --mode analyze",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "type-check": "tsc --noEmit",
+    "start-mcps": "node scripts/start-mcps.js",
+    "start-mcps:core": "node scripts/start-mcps.js core",
+    "start-mcps:browser": "node scripts/start-mcps.js browser",
+    "start-mcps:tools": "node scripts/start-mcps.js tools",
+    "start-mcps:system": "node scripts/start-mcps.js system",
+    "build:ci": "CI=false npm run build",
+    "build:netlify": "npm run build",
+    "postbuild": "echo \"Build completed successfully\""
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.92.7",
+    "@react-three/fiber": "^8.15.12",
+    "framer-motion": "^10.16.16",
+    "lucide-react": "^0.344.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-helmet-async": "^2.0.4",
+    "three": "^0.159.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.27.2",
+    "@babel/preset-react": "^7.27.1",
+    "@babel/register": "^7.27.1",
+    "@eslint/js": "^8.57.0",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@types/three": "^0.159.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.18",
+    "axe-core": "^4.10.3",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.11",
+    "globals": "^15.9.0",
+    "playwright": "^1.52.0",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "terser": "^5.24.0",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^8.3.0",
+    "vite": "^5.4.2",
+    "vite-bundle-analyzer": "^0.7.0",
+    "vite-plugin-pwa": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}
